@@ -126,3 +126,5 @@ ENVIRONMENT |  position, map, effect of |
 
 **Strengths:** fast boilerplate, readable documentation, quickly explains algorithm choice, easy to iterate.
 **Limitations:** may produce plausible but wrong code, may pick an algorithm without weighing alternatives, may miss edge cases unless asked, and the programmer must still test and understand the output – which is why `test_agent.py` is included.
+
+Lab 1: goal-based warehouse navigation agent (BFS).
