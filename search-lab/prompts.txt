@@ -1,0 +1,54 @@
+PROMPTS USED WITH THE LLM  (Appendix)
+======================================
+
+Prompt 1 (Task 2 - generate A*)
+-------------------------------
+I am implementing a simple goal-based search agent in Python.
+
+The environment is a grid represented by an ASCII map. The agent starts at S
+and must reach G. The symbols # represent obstacles and . represents free
+cells. The agent can move up, down, left, or right, and every movement has
+cost 1.
+
+Implement A* search. Use Manhattan distance as the heuristic:
+h(n) = |x - xG| + |y - yG|.
+
+The program should:
+- represent grid positions as states;
+- maintain an appropriate frontier;
+- calculate g(n), h(n) and f(n);
+- avoid repeatedly expanding the same state;
+- reconstruct the path when the goal is reached;
+- report the path and its length;
+- report the number of states expanded.
+
+Keep the implementation simple and explain the main components of the code.
+
+Map:
+#################
+#S....#.........#
+#.###.#.#######.#
+#...#.#.......#.#
+###.#.#######.#.#
+#...#.........#.#
+#.###########.#.#
+#.............#G#
+#################
+
+Prompt 2 (Task 5 - BFS baseline)
+--------------------------------
+Using the same GridProblem class and the same SearchResult format, add a
+breadth-first search function so I can compare it with A* on the same map.
+Count "expanded" states with the same rule as in A*.
+
+Prompt 3 (Task 6 - heuristic explanation)
+-----------------------------------------
+Why is Manhattan distance an appropriate (admissible and consistent)
+heuristic for a grid robot that can only move up, down, left and right with
+cost 1 per move?
+
+Prompt 4 (follow-up improvement, after seeing A* tie with BFS on an open map)
+-----------------------------------------------------------------------------
+On an open grid many states have the same f(n). How can I break ties in the
+A* priority queue so that it expands fewer states?
+(Answer adopted: order the heap by (f, h, counter) - prefer smaller h.)
