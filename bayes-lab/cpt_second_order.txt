@@ -1,0 +1,32 @@
+Second-order CPT:  P(next | prev2, prev1)
+=========================================
+P(next | ('<START>', '<START>')) = {the: 1.000}
+    zero-probability next tokens: cat, dog, mat, on, park, ran, rug, sat, to, <END>
+P(next | ('<START>', 'the')) = {cat: 0.500, dog: 0.500}
+    zero-probability next tokens: mat, on, park, ran, rug, sat, the, to, <END>
+P(next | ('the', 'cat')) = {ran: 0.333, sat: 0.667}
+    zero-probability next tokens: cat, dog, mat, on, park, rug, the, to, <END>
+P(next | ('the', 'dog')) = {ran: 0.333, sat: 0.667}
+    zero-probability next tokens: cat, dog, mat, on, park, rug, the, to, <END>
+P(next | ('cat', 'sat')) = {on: 1.000}
+    zero-probability next tokens: cat, dog, mat, park, ran, rug, sat, the, to, <END>
+P(next | ('dog', 'sat')) = {on: 1.000}
+    zero-probability next tokens: cat, dog, mat, park, ran, rug, sat, the, to, <END>
+P(next | ('cat', 'ran')) = {to: 1.000}
+    zero-probability next tokens: cat, dog, mat, on, park, ran, rug, sat, the, <END>
+P(next | ('dog', 'ran')) = {to: 1.000}
+    zero-probability next tokens: cat, dog, mat, on, park, ran, rug, sat, the, <END>
+P(next | ('sat', 'on')) = {the: 1.000}
+    zero-probability next tokens: cat, dog, mat, on, park, ran, rug, sat, to, <END>
+P(next | ('on', 'the')) = {mat: 0.500, rug: 0.500}
+    zero-probability next tokens: cat, dog, on, park, ran, sat, the, to, <END>
+P(next | ('ran', 'to')) = {the: 1.000}
+    zero-probability next tokens: cat, dog, mat, on, park, ran, rug, sat, to, <END>
+P(next | ('to', 'the')) = {park: 1.000}
+    zero-probability next tokens: cat, dog, mat, on, ran, rug, sat, the, to, <END>
+P(next | ('the', 'mat')) = {<END>: 1.000}
+    zero-probability next tokens: cat, dog, mat, on, park, ran, rug, sat, the, to
+P(next | ('the', 'rug')) = {<END>: 1.000}
+    zero-probability next tokens: cat, dog, mat, on, park, ran, rug, sat, the, to
+P(next | ('the', 'park')) = {<END>: 1.000}
+    zero-probability next tokens: cat, dog, mat, on, park, ran, rug, sat, the, to

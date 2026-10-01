@@ -1,0 +1,24 @@
+First-order CPT:  P(next | current)
+===================================
+P(next | <START>) = {the: 1.000}
+    zero-probability next tokens: cat, dog, mat, on, park, ran, rug, sat, to, <END>
+P(next | the) = {cat: 0.250, dog: 0.250, mat: 0.167, park: 0.167, rug: 0.167}
+    zero-probability next tokens: on, ran, sat, the, to, <END>
+P(next | cat) = {ran: 0.333, sat: 0.667}
+    zero-probability next tokens: cat, dog, mat, on, park, rug, the, to, <END>
+P(next | dog) = {ran: 0.333, sat: 0.667}
+    zero-probability next tokens: cat, dog, mat, on, park, rug, the, to, <END>
+P(next | sat) = {on: 1.000}
+    zero-probability next tokens: cat, dog, mat, park, ran, rug, sat, the, to, <END>
+P(next | ran) = {to: 1.000}
+    zero-probability next tokens: cat, dog, mat, on, park, ran, rug, sat, the, <END>
+P(next | on) = {the: 1.000}
+    zero-probability next tokens: cat, dog, mat, on, park, ran, rug, sat, to, <END>
+P(next | to) = {the: 1.000}
+    zero-probability next tokens: cat, dog, mat, on, park, ran, rug, sat, to, <END>
+P(next | mat) = {<END>: 1.000}
+    zero-probability next tokens: cat, dog, mat, on, park, ran, rug, sat, the, to
+P(next | rug) = {<END>: 1.000}
+    zero-probability next tokens: cat, dog, mat, on, park, ran, rug, sat, the, to
+P(next | park) = {<END>: 1.000}
+    zero-probability next tokens: cat, dog, mat, on, park, ran, rug, sat, the, to

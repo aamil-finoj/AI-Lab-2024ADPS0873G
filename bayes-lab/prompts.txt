@@ -1,0 +1,39 @@
+PROMPTS USED WITH THE LLM  (Appendix)
+======================================
+
+Prompt 1 (Part V - first-order model)
+-------------------------------------
+Write a simple Python implementation of a first-order autoregressive language
+model. The model should:
+1. take a list of tokenised sentences as training data;
+2. count transitions between consecutive tokens;
+3. construct the conditional distribution P(Xt | Xt-1);
+4. display the probabilities for a specified previous token;
+5. predict the most probable next token;
+6. generate a sentence by repeatedly sampling the next token;
+7. stop when the <END> token is generated.
+
+Do not use a machine-learning library or a pretrained language model. Use
+ordinary Python data structures and random sampling.
+
+Training data (each sentence wrapped in <START> ... <END>, lower-cased):
+  the cat sat on the mat / the cat sat on the rug / the dog sat on the mat /
+  the dog ran to the park / the cat ran to the park / the dog sat on the rug
+
+Prompt 2 (Part VII - probabilistic test)
+----------------------------------------
+Write a check that, for every context word w, the probabilities P(v | w) sum
+to 1, and a test that sampling frequencies match the CPT.
+
+Prompt 3 (Part X - two generation modes)
+----------------------------------------
+Add two generation modes: greedy (always arg max P(w | previous)) and
+sampling (draw from P(w | previous)). Greedy must be deterministic.
+
+Prompt 4 (Part XII - second-order model)
+----------------------------------------
+Modify the existing first-order autoregressive model into a second-order
+model. The model should estimate P(Xt | Xt-2, Xt-1). Represent the model using
+counts of observed triples and use these counts to construct conditional
+probability distributions. Do not replace the model with a neural network or a
+pretrained language model.
