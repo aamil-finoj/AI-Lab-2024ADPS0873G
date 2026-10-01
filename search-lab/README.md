@@ -174,3 +174,5 @@ Observations:
 **4. What did the LLM contribute?** Fast translation of the design into working code, boilerplate such as the heap and path reconstruction, and explanations of terms. The problem formulation, tests, experiments and judgement remained the engineer's job.
 
 **5. What could go wrong without testing?** The code might loop forever on unsolvable maps, return non-shortest paths, miscount expansions, or silently misbehave on edge cases. A plausible-looking path is not proof of a correct algorithm: *working output is not a validated algorithm.*
+
+Lab 2: A* and BFS search on a warehouse grid.
